@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="AccountPR" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="AccountPR" this:AccountPR.in_Attachment="C:\Users\aloirdi\OneDrive - Capgemini\Documents\UiPath\IDP_Payment Proof\Proves of Payment\BE02734065613940-2023-05-05-10.14.57.411807.pdf" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Type" Type="InArgument(x:String)" />
     <x:Property Name="in_Name" Type="InArgument(x:String)" />
@@ -13,7 +13,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>885.6,1241.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>789.6,4368.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AccountPR_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -51,183 +51,139 @@
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.ComponentModel</x:String>
+      <x:String>System.Security</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="53">
-      <AssemblyReference>System.Activities</AssemblyReference>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="106">
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
-      <AssemblyReference>System.Xml</AssemblyReference>
-      <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>System.ObjectModel</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.OmniPage.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
-      <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>UiPath.Workflow</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AccountPR" sap:VirtualizedContainerService.HintSize="896,1176.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AccountPR" sap:VirtualizedContainerService.HintSize="800,4304" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: IDP - Demo" sap:VirtualizedContainerService.HintSize="833.6,62.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="59d46c4e-9ddc-47f9-831c-9cc567fd2ddf" Version="V2" WindowResize="Maximize">
-      <uix:NApplicationCard.Body>
-        <ActivityAction x:TypeArguments="x:Object">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Login to app" sap:VirtualizedContainerService.HintSize="400,392" sap2010:WorkflowViewState.IdRef="Sequence_2">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set username" sap:VirtualizedContainerService.HintSize="337.6,62.4" sap2010:WorkflowViewState.IdRef="SetValue_1" Text="robot@demo.com">
-              <ui:SetValue.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="019da9a2-19d2-4e46-a22c-36b59cadb075" InformativeScreenshot="46c1a07b7140cc14b6bb286b49a73cc7" Selector="&lt;webctrl id='email' tag='INPUT' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:SetValue.Target>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:SetValue>
-            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set PW" sap:VirtualizedContainerService.HintSize="337.6,62.4" sap2010:WorkflowViewState.IdRef="SetValue_2" Text="robotdemo">
-              <ui:SetValue.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="019da9a2-19d2-4e46-a22c-36b59cadb075" InformativeScreenshot="3aa8a49d072926494ac37c5d110fdcce" Selector="&lt;webctrl id='password' tag='INPUT' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:SetValue.Target>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:SetValue>
-            <uix:NClick ClickType="Single" DisplayName="Click 'Sign In'" sap:VirtualizedContainerService.HintSize="337.6,62.4" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="59d46c4e-9ddc-47f9-831c-9cc567fd2ddf" Version="V3">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://idpdemo.knack.com/idp-demo#home/" DesignTimeRectangle="239, 612, 175, 40" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Sign In'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='kn-button is-primary' aaname='Sign In' check:text='Sign In' /&gt;" Guid="1df17c29-b4aa-464a-bc70-2bf1ce1594ab" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALMAAAAsCAYAAAAuJIllAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKASURBVHhe7Z27ThtBFEBp80lRGv4mRZQmfAgiUjp/QiQaWhoKd26R6FyiFHGBRDtwZ+cOszN3sIVsvNd7jnQKvA+t0dnlLqD1WQA4EYgZTgYz5j9/78K375fhy/mvcPb1J+IklB6lS+nTYhTzv/9P4fzHb3NHiFNSOpVeS0YxEzJ6UnotyTHLpdvaAHHKliNHjllmEWtlxCkr3So5Zm720KPSrZJjtlZE9KBCzOhehZjRvQoxo3sVYkb3KsSM7lWIGd2rEDO6VyHm6DLcp+/DG8/h9iotv3oIm9dX7m/KbQ7tdbiV/6NZL41lWKoQ881jfP91qIs1MXtRmXnMUw6GmHdVmXnMw3ixWV0by44tMe+qMvsxY7GWd/8YFsaybGfMuFg9y8aZzWrZBBj3L1+nfSjbTyAj5riPYfwZjlvZcvwnrsLMXNz8dQMzYm5PghSfUMcsPD2EC123M6eP7cU88LZtWq/c/8xUiDlZXumaqOuYiyvkaD09MZqY6yvnLiNEP+bm+OLJYR3PPFSIuTJHbUSkMQ/jhfWjvQ0w7s+INr7+7tW0F7MRbX2yzUyFmC3rMaCKpR8iMR9DhZhNq5CIedIqxGw6hJRn0zqW3oya1iPmz1WZecxyw9bOvjG08vUmlhTarr/NIOaDqhBzev8j6sjMWIp4IxJZGyAxH16FMWOvDgFu/4MI7lOFmPfpzK+Qx1Ih5g/5Op40I0L7BxP8HBVi/pD1vDzAeHEcFWJG9yrEjO5ViBndq+SYeXAietR8cCKPtEWPmo+05WHj6FHzYeMCHwOBnux+DITAB/SgF6XTdz+gR5FLt8wi3BTilJQepctytCgxYwbwCDHDiRDCC6Ki0N2PaDJyAAAAAElFTkSuQmCC" InformativeScreenshot="e3ece16afbbcff3b17c5282bc0eaaaf4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IDP - Demo' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
-              </uix:NClick.Target>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </uix:NClick>
-          </Sequence>
-        </ActivityAction>
-      </uix:NApplicationCard.Body>
-      <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="c5335f1a86305e36d820e321dbf64eb3.jpg" Selector="&lt;html app='chrome.exe' title='IDP - Demo' /&gt;" Url="https://idpdemo.knack.com/idp-demo#home/" />
-      </uix:NApplicationCard.TargetApp>
+    <If Condition="[in_Name = &quot;&quot;]" DisplayName="Name empty ?" sap:VirtualizedContainerService.HintSize="737.6,52.8" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: IDP - Demo" sap:VirtualizedContainerService.HintSize="833.6,951.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="e721e321-6193-4ddf-bccc-ac1f7ee46586" Version="V2">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="476.8,171.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign DisplayName="Set Default Name" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[in_Name]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">Unknown</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_12" />
+      </If.Else>
+    </If>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: IDP - Demo" sap:VirtualizedContainerService.HintSize="737.6,4099.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="e721e321-6193-4ddf-bccc-ac1f7ee46586" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Add new record" sap:VirtualizedContainerService.HintSize="800,724.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence DisplayName="Add new record" sap:VirtualizedContainerService.HintSize="704,3882.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:Boolean" Name="MoveOn">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:Boolean" />
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="x:Boolean" Default="False" Name="MoveOn" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[in_Type = &quot;Payables&quot;]" DisplayName="Payable or Revievable ?" sap:VirtualizedContainerService.HintSize="737.6,62.4" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[in_Type = &quot;Payable&quot;]" DisplayName="Payable or Revievable ?" sap:VirtualizedContainerService.HintSize="641.6,3500" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Data Entry" sap:VirtualizedContainerService.HintSize="433.6,319.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="6cf468bf-fc01-4533-98cb-e9e733aae9d5" Version="V2">
+                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Data Entry" sap:VirtualizedContainerService.HintSize="608,1284.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="6cf468bf-fc01-4533-98cb-e9e733aae9d5" Version="V2">
                   <uix:NApplicationCard.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Create New AP" sap:VirtualizedContainerService.HintSize="400,92.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <Sequence DisplayName="Create New AP" sap:VirtualizedContainerService.HintSize="574.4,1068" sap2010:WorkflowViewState.IdRef="Sequence_4">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ClickType="Single" DisplayName="Got to AP List" sap:VirtualizedContainerService.HintSize="462.4,62.4" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6cf468bf-fc01-4533-98cb-e9e733aae9d5" Version="V3">
+                        <uix:NClick ClickType="Single" DisplayName="Got to AP List" sap:VirtualizedContainerService.HintSize="512,52.8" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6cf468bf-fc01-4533-98cb-e9e733aae9d5" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://idpdemo.knack.com/idp-demo#home/" DesignTimeRectangle="234, 342, 181, 41" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Account Payables'" FullSelectorArgument="&lt;webctrl parentid='view_4' tag='A' aaname='*Account Payables         ' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='view_4' tag='A' aaname='*Account Payables         ' type='' class='kn-link kn-link-1 kn-link-page kn-button' check:text='Account Payables' /&gt;" Guid="f0e7ab59-c104-47f4-8daa-f58bc710253d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALkAAAAtCAYAAADyWsoJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAR/SURBVHhe7Z2xTuwwEEXfv/E1fAqf8QokWnoKKrQNBcXTFogVBQUIUVP6ZWJ7Y89cJ94lgY25lk5BYjv2zPEQKHb/ODa2xhslZ2u+UXK25huU/PPz072+vrrdbuceHx8JOWnEU/FVvEXNSP7x8eGenp7cy8uLe3t7c+/v74ScNOKp+Creir+6ZZJLh+fnZ8pNVol4K/5q0feSS6mXk0DByZoRf8Xj9NVlL7m800jJRwMJWRPisfgc215yeXlnFSctIB6Lz7HtJZe/UtEAQtaI+BwbJSdNQslJ81By0jyUnDQPJSfNQ8lJ81By0jyUnDQPJScTbN3F3zt3frMD9yy313fu7OrB/QP3forvk3xz7866YJ1db/H95vByXGzQPc3OXV51sZH4KOrGLwklr8Qn8fxq0yXu3t3CPo2xfXDn1ZIGybUcoTDUCrYMlLyOPuEbd7k9pLqtnDkk7/h389OFgZJX0ScqbLwmCH2fLrB7QP/JPkGytI9NVJALvEJ5ueRgDteGtfvEl55t1gb65JQlj9V8f1im9qX7p5h74bnJXHYNieT62WC9xfzG19WRsfFZab85CuI3SK4qQb/ZXB7dVwfg9ib9ebqPF1QFKCYoE/oYyTfdPGllxeuZq5Ln8ZJ+KnZG3LAesCctoOwxP/horL/Wv2pm6yvkAUhuYxkPVxLHEC99YNcheZ+EVIqyWMUqkDDZBwUrYoQ4QvJsfLnvXJL7Z469rtg94DFBVhSXBL8XcIjRGsAeTX5KcVDX7XPnY2HJsUR4QzVJmO4zHiw9/hjJwdzm8HTMILlfw/QcVWL1a1QHEWH6BclBjIoHLFlLOR9qLIrhTCwreeUp7qnZZEUfk/AMnZQjJEdzo/0cI3nXP6dwWMPcWd9sXQX5wD7xs63kuLCEscmzdYz6n7O5FToX4Xpd3OpYVPJYiYqkiampNBV9Vi15cd2RUFUr1pVXUD9OryUKmAlsYlwhuT5MyVrG84GIexRKv5EPY0HJw2Jh9QAS1UhR0SdPrkYnrCzXKUpe2htcV/r8Xlw1rrS+guQ4j/YA6LWM52OEsL6SP4ewnOR9sEaSHDZRI9xARR8zbwL4TdAnpSTODJLjCqipkxw/P0horoc5O0n6cVoWEAvB7jvMj0QFOTZrPCgOKXUxqWExyX2wxk+w6RMCkiek2+y1DdpYH189KqUD1+P4L0meSJb1hdQl1O4rjJO1orEiYf8vTysziiPed5RcPQPmAcfI5xnFZ8i9PBvlKx9zHMtIXgiAAVb7JKgRM09FnzB3SjFgum83l0/4VyQfrvdzjgpcJ7kQhYnIM4vrKlb5ANi3v2YllyIwHAIPqs6lteixejy6P4fgwmKVnJwCg6D4/u+AkjeMr47jr4y/AUreKuFV6bdXcYGSt0bydwAF91By0jyUnDQPJSfNAyXnRzeTVih+dDM/hJ+0QvFD+Pl1KqQFxN/i16lI4xdjkTUj3o5+MVZs0kFOgpR8yk7WgHgqvoq3WnBpRnJpUurlnUZe3uWvVEJOGfFUfE1fUYbm3H/cczoBMgz1VQAAAABJRU5ErkJggg==" InformativeScreenshot="be15dff687e1ff5a2d065e202942d98a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IDP - Demo' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
                           </uix:NClick.Target>
@@ -238,7 +194,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <uix:NClick ClickType="Single" DisplayName="Open AP Form" sap:VirtualizedContainerService.HintSize="462.4,62.4" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6cf468bf-fc01-4533-98cb-e9e733aae9d5" Version="V3">
+                        <uix:NClick ClickType="Single" DisplayName="Open AP Form" sap:VirtualizedContainerService.HintSize="512,52.8" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6cf468bf-fc01-4533-98cb-e9e733aae9d5" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://idpdemo.knack.com/idp-demo#home/account-payables/" DesignTimeRectangle="234, 556, 213, 41" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Add Account Payable'" FullSelectorArgument="&lt;webctrl parentid='view_7' tag='A' aaname='*Add Account Payable* ' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='view_7' tag='A' aaname='*Add Account Payable* ' type='' class='kn-link kn-link-1 kn-link-page kn-button' check:text='Add Account Payable' /&gt;" Guid="51309c36-ac3a-476a-bdad-ecb59614bbce" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANkAAAAtCAYAAAAjvc55AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAVASURBVHhe7Z27TuUwEIb33XiafRQegwKJlp6CCp2GggJRII4oKECImtKb8SVx5mI7IT4H2N/SJy2JL+OZ/3cCWil/HBoaWtcGk6GhdW4wGRpa56aa7PPz072+vrr9fu8eHx8BAAXIJ+QX8o3WhMk+Pj7c09OTe3l5cW9vb+79/R0AUIB8Qn4h35B/eJuZjDo8Pz/DXACsgHxD/uFGG01GjzpyIgwGwHrIP+Sj/NVxNBm9U9IjTxsIAGiHfER+Sm00Gf3yhqcYAF+HfER+Sm00Gf2VRBsAAFgO+Sk1mAyADsBkAHQGJgOgMzAZAJ2ByQDoDEwGQGdgMgA6A5MB0JkfYrIHd3p24/5e7ZV7kvurnTs5u3XXyj3w+7i+vHEnF3fuXrkneLhzfwctne6Ue504nMl2t4Pwh2RcPuj3ixzCZGGN/8ece3d+sTSnlB/GqnpuC0zmiQW9WPuE6W8yP2aI79AFOB5rcrpz5w/59XgwtQq8EzAZ4TdGBQpFWb7B3iabTnVfsG9wOvdnC5MNHEG0HJhsIDwlQhLqCYmn48hkTk0QofhZ/8Egi002HgLDv/1rrSKmnFiofF1eNBGXEo/PRaWPHU/MU34gZALi6+fxydiIcr7CmLY4yvsKB5quAXmvJUeTpuL4sa8Sr2kyTXe8zzoOYDJmkJKIk3gV4dDGuclCAeZzTUUpiyZnKhL9bBuaSAKdFWmI8Xz8ORV6vv791V32cywoE5q2nzUmo9fyPH415so+OTWTzeqbx6QYx5yLG6BhLiLUj171NS2wdfga2bV6ztbR32ReJMpJNktedp0l0OPnYIKI12QSdJHbBJHk84QEK+O1AjHMsRmh+FofJQd+n8tMJnOo9N3KZGYdMvgeFFETLbnT8hHyWdCCkqOpb0WP4vpyOptMD1RNZlHAUhDh9FIMOdBUrMiSWOrzthSmLG6xxgqTybljXLN8bWCyuF5ViEo+Zf0aRW3NZdRF5JOPV+ZL1OvdRl+TWRvQrptiIrggygVpT441j3ZdEyoj7qso3EJRPTwPK0ymzS1FvcZkwxwMax/p6WL25fvysev1r80l9zYhDgeeIx+HnH/im5vMKsxInphjmCwmXI3Nk8dTXtNTMxBR6/OtTWbVZ2KseTWu+fp+HDNK61x1kxWeZEXdbUNHkykiyBBFK4kv3ssFUUpsOPnqJiv2W7hmoEW45T5CFPGklXlR8lvIoYy9JdYJUS8VY04jrimmcIDNx7XPVaqj2DcfX8jZVvQzmSmOSNzclERFNJF0ouUJt4se56mazF4voLwe1vY0UCp4wu6jPC1FnubXv2oye/9zmkxmrJ/qJ+JKT5EdjWNzL5gr5FPbt7JHMa9S543pZrJVYosingmKrsX/iTEXWkzObI14Irb8z5IGw2h9QsxMEEO/qU8sLCva9WUej9WH78e6HscTq02mX7NoMpm2r5hDPddZvYTZ2+cK+SHy+DR9DGg5SvOyGGjPWi6X0sdkcSPVU1IRcZ5Ij09ySLg4zcdETtBcQRAlkxkFEMRCK8nP15Tik3FJMbf0sfrSekpsC002M2slF20mG0i1T9CahbhSLlUxN8417k3rn89HWLHwsdb4FXR7kgHQQv1A/PnAZOCIWG8ovwuYDByN8LvU736KETAZODjTHyp+v8EImAyAzsBkAHQGJgOgM6rJ8OkkALbB/HQSPgIIwDaYHwHE52wB+DrkH/NzttTwYXYA1kO+KX6YPTXqQE6kRx7MBkAd8gn5hXzDDUZNmIwaPeronZJ+eaO/kgAAbMgn5Jf8FXFqzv0DXHjnWW97lXoAAAAASUVORK5CYII=" InformativeScreenshot="b5b74ccfebe506b372134d8d3bcd6fdf.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IDP - Demo' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
                           </uix:NClick.Target>
@@ -249,13 +205,13 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NClick>
-                        <Sequence DisplayName="Fill in Form" sap:VirtualizedContainerService.HintSize="462.4,834.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <Sequence DisplayName="Fill in Form" sap:VirtualizedContainerService.HintSize="512,767.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Type Beneficiary" sap:VirtualizedContainerService.HintSize="400,62.4" sap2010:WorkflowViewState.IdRef="SetValue_3" Text="[in_Name]">
+                          <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Type Beneficiary" sap:VirtualizedContainerService.HintSize="449.6,52.8" sap2010:WorkflowViewState.IdRef="SetValue_3" Text="[in_Name]">
                             <ui:SetValue.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8c0c7c16-0ac0-481e-9c68-e88ac7a3a06c" InformativeScreenshot="cdec65a178168c8d68e33ee34f194bfb" Selector="&lt;webctrl id='field_3' tag='INPUT' /&gt;">
                                 <ui:Target.TimeoutMS>
@@ -273,7 +229,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:SetValue>
-                          <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Type Amount" sap:VirtualizedContainerService.HintSize="400,62.4" sap2010:WorkflowViewState.IdRef="SetValue_4" Text="[in_Amount]">
+                          <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Type Amount" sap:VirtualizedContainerService.HintSize="449.6,52.8" sap2010:WorkflowViewState.IdRef="SetValue_4" Text="[in_Amount]">
                             <ui:SetValue.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8c0c7c16-0ac0-481e-9c68-e88ac7a3a06c" InformativeScreenshot="ed775b830867dbc5dd1474c8fed8466d" Selector="&lt;webctrl id='field_1' tag='INPUT' /&gt;">
                                 <ui:Target.TimeoutMS>
@@ -291,7 +247,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:SetValue>
-                          <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Type Communication" sap:VirtualizedContainerService.HintSize="400,62.4" sap2010:WorkflowViewState.IdRef="SetValue_5" Text="[in_Communication]">
+                          <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Type Communication" sap:VirtualizedContainerService.HintSize="449.6,52.8" sap2010:WorkflowViewState.IdRef="SetValue_5" Text="[in_Communication]">
                             <ui:SetValue.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c97ab904-65ef-42c0-887c-89fbf46386ed" InformativeScreenshot="3349d73146f70621e223ee7c5873a8ba" Selector="&lt;webctrl id='field_2' tag='INPUT' /&gt;">
                                 <ui:Target.TimeoutMS>
@@ -309,7 +265,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:SetValue>
-                          <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Type Date" sap:VirtualizedContainerService.HintSize="400,62.4" sap2010:WorkflowViewState.IdRef="SetValue_6" Text="[in_Date]">
+                          <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Type Date" sap:VirtualizedContainerService.HintSize="449.6,52.8" sap2010:WorkflowViewState.IdRef="SetValue_6" Text="[in_Date]">
                             <ui:SetValue.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="943944db-05e5-48b7-90eb-91b24e1eacc6" InformativeScreenshot="0f8211c1587c280d3262a26bb82878f4" Selector="&lt;webctrl name='date' tag='INPUT' /&gt;">
                                 <ui:Target.TimeoutMS>
@@ -327,7 +283,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:SetValue>
-                          <Sequence DisplayName="Attachment" sap:VirtualizedContainerService.HintSize="400,92.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <Sequence DisplayName="Attachment" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -338,7 +294,7 @@
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="https://idpdemo.knack.com/idp-demo#home/account-payables/add-account-payable/" DesignTimeRectangle="229, 579, 321, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT field_17_upload'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='file' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='file' class='input is-file' aaname='' /&gt;" Guid="37990dbe-a326-4667-a7b1-d5fe95d1af05" ImageBase64="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" InformativeScreenshot="b7b33e60bac5015181b3af523da90743.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IDP - Demo' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                       <uix:Target DesignTimeRectangle="229, 547, 97, 23" ElementType="Text" FriendlyName="'Attachment'" FullSelectorArgument="&lt;webctrl parentid='kn-input-field_17' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='kn-input-field_17' tag='SPAN' type='' class='' aaname='Attachment' check:innerText='Attachment' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAbCAYAAABlVEF+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIqSURBVGhD7ZXrrcMwCIXvVJ3Lq6SbRB2gK1TZolJ38I2DHQMGN00fovdyJP44fhzzYfITXebkUAzKoRiUQzEoh2JQDsWgHIpBORSD+lIotziGQzwcUgxxyqN/RQqUKQ7LhXOEcU6DJf1HKJehAlkixPGavzHdTkH9Ph3flbTvh9LLmwgFkkkjnNq3Uufxzd+dtO+GoucNJECprSucxtrGhBbmUPbpcSiodQ0XZYPrGEOeQ2Oec+atrwQkD54t/yaba9toebEcCvsHHhEmtEdaS88v53bWZzW+SZHe8VPm9vKG7t9AqRByBbJLLXoCSt2fBzWmzWuhyLF6FcCSCEG8SypIUO+snKOtfvZBQYTXakFjrIXpz5BXTkfIaEkkqUpy5hRHAYoIoKwjUIoX5WXguXmsesF3rOulIun6maXnDUSg4GTUStE3eQaK+BKWROC1sml9f6GAUGLWZM2SvfOipMkWo5mH/cjjD0DZYGCO+xdL2mJSiO4FsbQ5L4SyrN+Qk2beK6Go/Y7FpmeomBTaA0mEaSialyRtnjy+GQpuXdg8CG9eN6qb03anzRf7swBK/afMhTMs3rQkvBoK87IWEmg6lrP3QuF5A2UochKxJGjEMFuLD4aYTWEAUqyXxn5owNmfg0LGmtgHpZe3JICCWxeuTCxlDk0+3pwnFkxRQ2kMXZpVYmu+VNYnoYDaIsP7PQYlSc8b+dG7rMihGJRDMSiHYlAOxZxi/AWAcov54QroTAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
                                     </scg:List>
                                   </uix:TargetAnchorable.Anchors>
@@ -363,9 +319,9 @@
                               </uix:NClick.Target>
                             </uix:NClick>
                           </Sequence>
-                          <uix:NClick ClickType="Single" DisplayName="Submit entry" sap:VirtualizedContainerService.HintSize="400,167.2" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6cf468bf-fc01-4533-98cb-e9e733aae9d5" Version="V3">
+                          <uix:NClick ClickType="Single" DelayBefore="3" DisplayName="Submit entry" sap:VirtualizedContainerService.HintSize="449.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6cf468bf-fc01-4533-98cb-e9e733aae9d5" Version="V3">
                             <uix:NClick.Target>
-                              <uix:TargetAnchorable BrowserURL="https://idpdemo.knack.com/idp-demo#home/account-payables/add-account-payable/" DesignTimeRectangle="224, 661, 175, 40" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='kn-button is-primary' aaname='       Submit     ' check:innerText='Submit' /&gt;" Guid="b8c47c58-3989-477a-8948-57f25405f1aa" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALMAAAAsCAYAAAAuJIllAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKMSURBVHhe7Z09btwwEEbd5kiBG98mRZAmPkjgAOl8hABu3Lpx4c6tAXcujRTZYoFtGY6kkYbUeBEBSqxZvg94xVLU3+KJO9yCOkuEnEiQmZxMkJmcTFyZf/y8T+efvqUPF1/T2ccvAJtAfBQvxU8vhcy/fu/Txefv7oEAtoR4Kr7aFDIjMkRCfLUZZZah29sBYMvYkmOUWWoRrzPAlhFvNaPMTPYgIuKtZpTZ6wgQAQ0yQ3g0yAzh0SAzhEeDzBAeDTJDeDTIDOHRIPNKXL/kL/Hlwd0G/xYNMl89p93wHUx5Tdde3yP8F5mHa326dbY1jKZpmS8fD/nOD+nuyrbfpLt9HJm7e9g/p0vbrzE0Dcv8kJ7yfe8eb5xty3mvMgOZkXn1n2xkfj80DY/MUk7kGz8qwtDHkbST1+w7ylzX4NXxR/mqfv1DNZxPU1+bfQDr83SpS6Y20LQ9ATRC+CP0Qpn3h7QrBOxLGduvr9PLtm7fLOIun2u6jmFfe24r89DGyIzMhnI0LKVeKLP3L0glYC9zNYLqQ1Wdp+9rjonMLhpkHpmkniaFC2V2+tUTTV8+fzKKzH+HBpkreoF05ETmCGiQeUYp1luSLpW5KDOQeVU0yDyjlK+W1vaZyezVzLevuX2qkZF5fTTtyixizCQYygrb3slYitaLmzOTOceOzoN8tm1tmeuHpUU0bcs83HsRp1TopZoiMtUjdvc571v3dQVdU2YzcW1Vag1lBoRHg8wQHg0yQ3g0yAzh0SAzhEeDzBAeDTJDeDSjzCycCBFxF05kSVuIiLukLYuNQ0TcxcYlvAYCIvHmayAkvKAHoiCeHn1Bj0aGbqlFmBTClhAfxUtbWti4MhMSLyn9AfhdASktzEuxAAAAAElFTkSuQmCC" InformativeScreenshot="58fab70283014d5c1c79cb74c6177036.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IDP - Demo' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                              <uix:TargetAnchorable BrowserURL="https://idpdemo.knack.com/idp-demo#home/account-payables/add-account-payable/" DesignTimeRectangle="234, 661, 175, 40" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='*Submit*' parentid='view_12' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' aaname='*Submit*' parentid='view_12' type='submit' class='kn-button is-primary' check:text='Submit' /&gt;" Guid="b8c47c58-3989-477a-8948-57f25405f1aa" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALMAAAAsCAYAAAAuJIllAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKMSURBVHhe7Z29Tt1AEEZpeaSIhrdJEaUJD4KIlI5HiERDS0NBR4tER4lS5BZXot14bM8yux4jLJnguXs+6RSs13/oeJm1xPooEXIgQWZyMEFmcjBxZf71+zadfD1Px6c/0tGX7wCbQHwUL8VPL4XMf/7u0+m3n+6BALaEeCq+2hQyIzJEQny1yTLL0O3tALBlbMmRZZZaxOsMsGXEW02WmckeRES81WSZvY4AEdAgM4RHg8wQHg0yQ3g0yAzh0SAzhEeDzBAeDTKvxcVj2qWXdHPhbIMPRYPMHZdP4y/BZHd/5fad5T/J3F/r/jGdOdtaRdO4zHfpQW7+6a5sv34OJPNwDw/XZb+W0DQt89n9S3fnz+nS2baYTyszkFnTtMyr/slG5k9D03aZ0ZUTkjdF6Ps4kvbymn2NzHUNXh7/Vb6inz5U4zVp6muzD2B9nj51ydQAmuYngFmIuRF6ocy7fSngUMrYtrFOt23jsXb7rq+5jmHf8txWZnu8WvqW0DQvc48dDWupF8nsvwUpBRxlrkbQ4aGqzzP0tcdE5ikaZLZkqc2kcOHIPOnXUU40ffn8ySgyvwcNMk8Y5MgjJzJvHg0yOxRizUm6VOaqzEDm9dAgs0MhXy2t7WPbx37Tmvkq3ch/xOcaGZnXRtO0zCLGRIKxbn5tH2W0oo3iSmqZ3bcPRdvaMtcPS3tompd5Gq9UGKTKEZnqEbv/Wfat+s4Iup7MHXni2oX3zG3KDIeBBpkhPBpkhvBokBnCo0FmCI8GmSE8GmSG8GiyzCycCBFxF05kSVuIiLukLYuNQ0TcxcYlfAYCIjH7GQgJH+iBKIinb36gRyNDt9QiTAphS4iP4qUtLWxcmQmJl5T+AdXf/lKFtjjrAAAAAElFTkSuQmCC" InformativeScreenshot="f022a1bde3dc408c5cce40a0209332e8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IDP - Demo' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
                             </uix:NClick.Target>
                           </uix:NClick>
                         </Sequence>
@@ -378,14 +334,14 @@
                 </uix:NApplicationCard>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Create New AR" sap:VirtualizedContainerService.HintSize="400,92.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Create New AR" sap:VirtualizedContainerService.HintSize="555.2,2032" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ClickType="Single" DisplayName="Got to AR List" sap:VirtualizedContainerService.HintSize="462.4,62.4" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e721e321-6193-4ddf-bccc-ac1f7ee46586" Version="V3">
+                  <uix:NClick ClickType="Single" DisplayName="Got to AR List" sap:VirtualizedContainerService.HintSize="512,52.8" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e721e321-6193-4ddf-bccc-ac1f7ee46586" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://idpdemo.knack.com/idp-demo#home/" DesignTimeRectangle="413, 342, 206, 41" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Account Receivables'" FullSelectorArgument="&lt;webctrl aaname='                      Account Receivables         ' parentid='view_4' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                      Account Receivables         ' parentid='view_4' tag='A' type='' class='kn-link kn-link-2 kn-link-page kn-button' check:innerText='Account Receivables' /&gt;" Guid="bc8b8e4d-f8c9-4282-9f0b-6c32c6a7a242" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANIAAAAtCAYAAADbXTWOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAATsSURBVHhe7Z2/TtxAEMbzbnmaPEoeI0UkWnoKKnRNCoqIAnGioAAhasqNx9692535xp67WxP+fCv9FGGPx/PvWxsUyd8SFxfXyYtC4uLqsCgkLq4OCwrp9fU1PT4+pu12m25vbwn58ogWRBOiDbSMkF5eXtLd3V16eHhIT09P6fn5mZAvj2hBNCHaEI3o1QhJDO7v7ykgQhxEG6IRLaadkOSRJWqjiAiZRzQiWqlf83ZCkvc/eXShCwkhLaIV0UxZOyHJL1N8GhESQ7QimilrJyT5ywS6gBCCEc2URSERciQUEiEdoJAI6QCFREgHKCRCOkAhEdIBComQDlBIhHSAQiIhLs+v0vdff9IlOHcyN9fpx6+r9HMDzgHGWM6u019w7n/xhkK6ST+HYq3WjHfHNv0+u0o/LrbgnOXvxWaojdRH8z7qRSHN82ZCGgflbHNQwT4208ZxmJA26fdNe3waYHv8U0EhRdnvzmMRzm+AzWejj5AO9fMhoZCCjIXKQ7L5s7jD2tcc+0qxbDOJt7EBxXebMsbZNne6p9xH+27vbWOzNhpfSPleZvMpr8oFv6bTU61C55tzdc8PNHUCtdmh+5tFUvs3m0ItJB0L2HS9npm6ww1b1y0u4DneREht4nM7bBlQPZjX1c8Bm9K8ppD4usOFNLyeDq+o+6HFfrs9kXIujR9wrAxROxR5aFR+l0Otys/2vpE6Zb+LQy6+VE5IhCWfwbbxCfuIezYea2IGuaNaDvF8ECFNCdmB1IPnH69ZtsmDoAo9YQfgcCEBcaDhyPc6TUhgGEp+ZojtcTe3Qh4sM0jguPZlB3cADaoBxF8E4/ahrYvJC9ig45H5OpbVhQSDhw30BqQmYOMNRwYOhNvA1g8e9gE4QMcIaYilwb8Xyq+t9fL9/cEKiNKtz/KgGl+wfgWbR7iH+loQcy9WFpI3+P6uNDt4ERtvd8roZh8uJDQoaGiPEVIVd87V1C7H5ZPjCwzNmLu5vmJOSKaHM5tcyaUGCAnHOtXRjyXft/at2Pegte0pqHWFhArYYAdnNrmIzWcRkpBjaHws5LcjYOfmDkC2TT1gb7IIVBzGV0BIdQ2gkJCAXUpcAurn4awqpDFhL9BcvH2BIoMXsFkQm26iG+N7ENKAiS+ymQgBOz8fi67bSHUP5Mvzb3yZWagAecAe6tgiZN+HiRCzopCy6t0g804SGeqKZRvrd48dbm+Ap+OnCynaJC8O2+y5/GoCdnMDrMDDWp4G1+O/2g++JtelPl5yBLGiuhi/YNOLEa3lMusJKZKcsQFFHrg8r4c3YAN3Gq9oYOBzXKcJyRskjCskdK7Ep0Qqdk29vToMg19imjYm3SepVZunl8sY2/g/ViKbUe6BxFT7KnHqWHOey3UtfnUMQ18qO68+be7HsZKQSmJo6GrAENfFLpgGRmyy7xo1eDvqRgriC2wE02DEhdTGMF+LyTcW0t5P5UPHLJgaCMt1KANfE94UShzw3nuhFqSexlc10Mge+gT309fq61GeyP8xrPdEIuQLQSER0gEKiZAOUEiEdIBCIqQDFBIhHaCQCOkAFBI/60JIHPezLvzQGCFx3A+N8dOXhMQQjbifvpTFjzETMo9oY/ZjzGWJgahNHl0UFCETogXRhGhDi0iWEZIseWTJ+5/8MiV/mSDkqyNaEE3Ur3P7ldI/1bBopgnRQ38AAAAASUVORK5CYII=" InformativeScreenshot="90430e7a01891b7508b7afacc7bdea48.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IDP - Demo' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
                     </uix:NClick.Target>
@@ -396,7 +352,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <uix:NClick ClickType="Single" DisplayName="Open AR Form" sap:VirtualizedContainerService.HintSize="462.4,62.4" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e721e321-6193-4ddf-bccc-ac1f7ee46586" Version="V3">
+                  <uix:NClick ClickType="Single" DisplayName="Open AR Form" sap:VirtualizedContainerService.HintSize="512,52.8" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e721e321-6193-4ddf-bccc-ac1f7ee46586" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://idpdemo.knack.com/idp-demo#home/account-receivables/" DesignTimeRectangle="224, 556, 238, 41" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Add Account Receivable'" FullSelectorArgument="&lt;webctrl parentid='view_11' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='view_11' tag='A' type='' class='kn-link kn-link-1 kn-link-page kn-button' aaname='                      Add Account Receivable         ' check:innerText='Add Account Receivable' /&gt;" Guid="3c2345b4-3be4-4825-be00-1db236d8542d" ImageBase64="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" InformativeScreenshot="80da437893056712b2c720a717db7120.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IDP - Demo' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
                     </uix:NClick.Target>
@@ -407,13 +363,13 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <Sequence DisplayName="Fill in Form" sap:VirtualizedContainerService.HintSize="462.4,1856" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence DisplayName="Fill in Form" sap:VirtualizedContainerService.HintSize="512,1756.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Type Source" sap:VirtualizedContainerService.HintSize="400,165.6" sap2010:WorkflowViewState.IdRef="SetValue_8" Text="[in_Name]">
+                    <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Type Source" sap:VirtualizedContainerService.HintSize="449.6,156" sap2010:WorkflowViewState.IdRef="SetValue_8" Text="[in_Name]">
                       <ui:SetValue.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8c0c7c16-0ac0-481e-9c68-e88ac7a3a06c" InformativeScreenshot="e151005056cdea2e4b7b23b3f73959ee" Selector="&lt;webctrl id='field_7' tag='INPUT' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -431,7 +387,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:SetValue>
-                    <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Type Recieved Amount" sap:VirtualizedContainerService.HintSize="400,165.6" sap2010:WorkflowViewState.IdRef="SetValue_9" Text="[in_Amount]">
+                    <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Type Recieved Amount" sap:VirtualizedContainerService.HintSize="449.6,156" sap2010:WorkflowViewState.IdRef="SetValue_9" Text="[in_Amount]">
                       <ui:SetValue.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8c0c7c16-0ac0-481e-9c68-e88ac7a3a06c" InformativeScreenshot="afd8622966fbe60e13cde2e9e3fb0450" Selector="&lt;webctrl id='field_5' tag='INPUT' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -449,7 +405,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:SetValue>
-                    <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Type Communication" sap:VirtualizedContainerService.HintSize="400,165.6" sap2010:WorkflowViewState.IdRef="SetValue_10" Text="[in_Communication]">
+                    <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Type Communication" sap:VirtualizedContainerService.HintSize="449.6,156" sap2010:WorkflowViewState.IdRef="SetValue_10" Text="[in_Communication]">
                       <ui:SetValue.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c97ab904-65ef-42c0-887c-89fbf46386ed" InformativeScreenshot="ed150b881c467dc080aa4247d4e48406" Selector="&lt;webctrl id='field_6' tag='INPUT' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -467,7 +423,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:SetValue>
-                    <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Type Date" sap:VirtualizedContainerService.HintSize="400,165.6" sap2010:WorkflowViewState.IdRef="SetValue_11" Text="[in_Date]">
+                    <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Type Date" sap:VirtualizedContainerService.HintSize="449.6,156" sap2010:WorkflowViewState.IdRef="SetValue_11" Text="[in_Date]">
                       <ui:SetValue.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="943944db-05e5-48b7-90eb-91b24e1eacc6" InformativeScreenshot="0f8211c1587c280d3262a26bb82878f4" Selector="&lt;webctrl name='date' tag='INPUT' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -485,27 +441,27 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:SetValue>
-                    <Sequence DisplayName="Attachment" sap:VirtualizedContainerService.HintSize="400,703.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <Sequence DisplayName="Attachment" sap:VirtualizedContainerService.HintSize="449.6,860.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NClick ClickType="Single" DisplayName="Open Attachment Wizard" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e721e321-6193-4ddf-bccc-ac1f7ee46586" Version="V3">
+                      <uix:NClick ClickType="Single" DisplayName="Open Attachment Wizard" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e721e321-6193-4ddf-bccc-ac1f7ee46586" Version="V3">
                         <uix:NClick.Target>
                           <uix:TargetAnchorable BrowserURL="https://idpdemo.knack.com/idp-demo#home/account-receivables/add-account-receivable/" DesignTimeRectangle="229, 579, 321, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT field_16_upload'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='file' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='file' class='input is-file' aaname='' /&gt;" Guid="5faa76c6-c13d-443f-9b8a-a372a523a1db" ImageBase64="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" InformativeScreenshot="b7b33e60bac5015181b3af523da90743.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IDP - Demo' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                 <uix:Target DesignTimeRectangle="229, 547, 97, 23" ElementType="Text" FriendlyName="'Attachment'" FullSelectorArgument="&lt;webctrl parentid='kn-input-field_16' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='kn-input-field_16' tag='SPAN' type='' class='' aaname='Attachment' check:innerText='Attachment' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAbCAYAAABlVEF+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIqSURBVGhD7ZXrrcMwCIXvVJ3Lq6SbRB2gK1TZolJ38I2DHQMGN00fovdyJP44fhzzYfITXebkUAzKoRiUQzEoh2JQDsWgHIpBORSD+lIotziGQzwcUgxxyqN/RQqUKQ7LhXOEcU6DJf1HKJehAlkixPGavzHdTkH9Ph3flbTvh9LLmwgFkkkjnNq3Uufxzd+dtO+GoucNJECprSucxtrGhBbmUPbpcSiodQ0XZYPrGEOeQ2Oec+atrwQkD54t/yaba9toebEcCvsHHhEmtEdaS88v53bWZzW+SZHe8VPm9vKG7t9AqRByBbJLLXoCSt2fBzWmzWuhyLF6FcCSCEG8SypIUO+snKOtfvZBQYTXakFjrIXpz5BXTkfIaEkkqUpy5hRHAYoIoKwjUIoX5WXguXmsesF3rOulIun6maXnDUSg4GTUStE3eQaK+BKWROC1sml9f6GAUGLWZM2SvfOipMkWo5mH/cjjD0DZYGCO+xdL2mJSiO4FsbQ5L4SyrN+Qk2beK6Go/Y7FpmeomBTaA0mEaSialyRtnjy+GQpuXdg8CG9eN6qb03anzRf7swBK/afMhTMs3rQkvBoK87IWEmg6lrP3QuF5A2UochKxJGjEMFuLD4aYTWEAUqyXxn5owNmfg0LGmtgHpZe3JICCWxeuTCxlDk0+3pwnFkxRQ2kMXZpVYmu+VNYnoYDaIsP7PQYlSc8b+dG7rMihGJRDMSiHYlAOxZxi/AWAcov54QroTAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
                           </uix:TargetAnchorable>
                         </uix:NClick.Target>
                       </uix:NClick>
-                      <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Type Path" sap:VirtualizedContainerService.HintSize="337.6,165.6" sap2010:WorkflowViewState.IdRef="SetValue_12" Text="[in_Attachment]">
+                      <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Type File Path" sap:VirtualizedContainerService.HintSize="387.2,156" sap2010:WorkflowViewState.IdRef="SetValue_13" Text="[in_Attachment]">
                         <ui:SetValue.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2a82d219-8b9e-4af1-bcef-dca60483ce70" InformativeScreenshot="43773bd7db4dbdbe6c80b1b4aba2ff69" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;">
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b111211d-72c8-4ef7-bcd1-d5b2f7fb36e2" InformativeScreenshot="b96aa16d9dfaf0daf47ba676adf86dc0" Selector="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;&lt;uia automationid='1148' cls='ComboBox' name='File name:' /&gt;&lt;uia automationid='1148' cls='Edit' name='File name:' /&gt;">
                             <ui:Target.TimeoutMS>
                               <InArgument x:TypeArguments="x:Int32" />
                             </ui:Target.TimeoutMS>
@@ -515,33 +471,33 @@
                           </ui:Target>
                         </ui:SetValue.Target>
                       </ui:SetValue>
-                      <uix:NClick ClickType="Single" DisplayName="Upload Document" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e721e321-6193-4ddf-bccc-ac1f7ee46586" Version="V3">
+                      <uix:NClick ClickType="Single" DelayBefore="1" DisplayName="Upload Document" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e721e321-6193-4ddf-bccc-ac1f7ee46586" Version="V3">
                         <uix:NClick.Target>
                           <uix:TargetAnchorable DesignTimeRectangle="801, 656, 110, 33" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' check:text='unchecked' /&gt;" Guid="8ca8db38-03c5-46f6-97ab-0fea73008de2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAlCAYAAACeVr0yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIqSURBVHhe7ZsxbsIwFIZ9A84TiRtwjkzt1qUT9AR4Y2tvkYVKrVoO0ApVDKkY2IoAKQtLq+g1zybFzzFhQrWdN3wCx8+JlC+/ncERRVEAEz4sMhJYZCQ0RM5XO+hPPqF3twBx+8F4xuB+qRzZ3ohILECBo8c17PY/UJYl4xHoZDzbQG+0aMgkIgcPS5CzrfMkjD8Mp19q1jTdEZEYXU6i/+z23yqVxB1pVCJdAxn/QFfEHWmwyGBgkZHAIiOBRUYCi4yEYEVmqQAhDBIJuaOuKwQoMoPUIU6LTSEzjnWJ4EQqYSfSp/rSrHG8CwQmUqcxzVx9FbmERCQgc91GsYnMIZdJ6xRM+o3xZZmDTPB6+rfZ7w9hiczS6ka2TZ9UdL2OokzdfxBipFZJNOWSa9QC6cPh43ocv0h7qiWpxXo7YXUKj/+PD0KFGu/fWhy9SCLhr+YgT51Pp9bGFFmfT2FN374QlshzN/HEGknrbJFtDwaLvBjO6fJEn7PWlHdWCou8IHr6tAUpaVa69DFThB5rprQ5rpKX1i8zLPLC6BtM1jVHSlFSIjNae6LOPJf9lssi/xkt0l4j4yQokWZqzoH1LLJucCKDIWqRXYJFRgKLjIRWkbjLnPe1+g/ua20VibuXh9O1czDjD+PXjfoGxHRHRM5XW5VK/L6Ak+kf6AQ/F0BH6Mp0R0QiWDCYvIO4fgZx9cR4RO/mBfryrSERaYhkwoRFRgKLjIICfgHj65fG4n7KLwAAAABJRU5ErkJggg==" InformativeScreenshot="120c3d8f4d27f961925027304843658a.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
                         </uix:NClick.Target>
                       </uix:NClick>
+                      <uix:NClick ClickType="Single" DelayBefore="3" DisplayName="Submit Entry" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e721e321-6193-4ddf-bccc-ac1f7ee46586" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://idpdemo.knack.com/idp-demo#home/account-receivables/add-account-receivable/" DesignTimeRectangle="234, 661, 175, 40" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='*Submit*' parentid='view_12' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' aaname='*Submit*' parentid='view_12' type='submit' class='kn-button is-primary' check:text='Submit' /&gt;" Guid="759ee7af-a504-4a0b-8bda-f859b3357c42" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALMAAAAsCAYAAAAuJIllAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKMSURBVHhe7Z29Tt1AEEZpeaSIhrdJEaUJD4KIlI5HiERDS0NBR4tER4lS5BZXot14bM8yux4jLJnguXs+6RSs13/oeJm1xPooEXIgQWZyMEFmcjBxZf71+zadfD1Px6c/0tGX7wCbQHwUL8VPL4XMf/7u0+m3n+6BALaEeCq+2hQyIzJEQny1yTLL0O3tALBlbMmRZZZaxOsMsGXEW02WmckeRES81WSZvY4AEdAgM4RHg8wQHg0yQ3g0yAzh0SAzhEeDzBAeDTKvxcVj2qWXdHPhbIMPRYPMHZdP4y/BZHd/5fad5T/J3F/r/jGdOdtaRdO4zHfpQW7+6a5sv34OJPNwDw/XZb+W0DQt89n9S3fnz+nS2baYTyszkFnTtMyr/slG5k9D03aZ0ZUTkjdF6Ps4kvbymn2NzHUNXh7/Vb6inz5U4zVp6muzD2B9nj51ydQAmuYngFmIuRF6ocy7fSngUMrYtrFOt23jsXb7rq+5jmHf8txWZnu8WvqW0DQvc48dDWupF8nsvwUpBRxlrkbQ4aGqzzP0tcdE5ikaZLZkqc2kcOHIPOnXUU40ffn8ySgyvwcNMk8Y5MgjJzJvHg0yOxRizUm6VOaqzEDm9dAgs0MhXy2t7WPbx37Tmvkq3ch/xOcaGZnXRtO0zCLGRIKxbn5tH2W0oo3iSmqZ3bcPRdvaMtcPS3tompd5Gq9UGKTKEZnqEbv/Wfat+s4Iup7MHXni2oX3zG3KDIeBBpkhPBpkhvBokBnCo0FmCI8GmSE8GmSG8GiyzCycCBFxF05kSVuIiLukLYuNQ0TcxcYlfAYCIjH7GQgJH+iBKIinb36gRyNDt9QiTAphS4iP4qUtLWxcmQmJl5T+AdXf/lKFtjjrAAAAAElFTkSuQmCC" InformativeScreenshot="f022a1bde3dc408c5cce40a0209332e8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IDP - Demo' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
                     </Sequence>
-                    <uix:NClick ClickType="Single" DisplayName="Submit entry" sap:VirtualizedContainerService.HintSize="400,167.2" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e721e321-6193-4ddf-bccc-ac1f7ee46586" Version="V3">
-                      <uix:NClick.Target>
-                        <uix:TargetAnchorable BrowserURL="https://idpdemo.knack.com/idp-demo#home/account-receivables/add-account-receivable/" DesignTimeRectangle="224, 661, 175, 40" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='kn-button is-primary' aaname='       Submit     ' check:innerText='Submit' /&gt;" Guid="ad066ec8-c95f-4d7d-8d8b-41c637350388" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALMAAAAsCAYAAAAuJIllAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKMSURBVHhe7Z09btwwEEbd5kiBG98mRZAmPkjgAOl8hABu3Lpx4c6tAXcujRTZYoFtGY6kkYbUeBEBSqxZvg94xVLU3+KJO9yCOkuEnEiQmZxMkJmcTFyZf/y8T+efvqUPF1/T2ccvAJtAfBQvxU8vhcy/fu/Txefv7oEAtoR4Kr7aFDIjMkRCfLUZZZah29sBYMvYkmOUWWoRrzPAlhFvNaPMTPYgIuKtZpTZ6wgQAQ0yQ3g0yAzh0SAzhEeDzBAeDTJDeDTIDOHRIPNKXL/kL/Hlwd0G/xYNMl89p93wHUx5Tdde3yP8F5mHa326dbY1jKZpmS8fD/nOD+nuyrbfpLt9HJm7e9g/p0vbrzE0Dcv8kJ7yfe8eb5xty3mvMgOZkXn1n2xkfj80DY/MUk7kGz8qwtDHkbST1+w7ylzX4NXxR/mqfv1DNZxPU1+bfQDr83SpS6Y20LQ9ATRC+CP0Qpn3h7QrBOxLGduvr9PLtm7fLOIun2u6jmFfe24r89DGyIzMhnI0LKVeKLP3L0glYC9zNYLqQ1Wdp+9rjonMLhpkHpmkniaFC2V2+tUTTV8+fzKKzH+HBpkreoF05ETmCGiQeUYp1luSLpW5KDOQeVU0yDyjlK+W1vaZyezVzLevuX2qkZF5fTTtyixizCQYygrb3slYitaLmzOTOceOzoN8tm1tmeuHpUU0bcs83HsRp1TopZoiMtUjdvc571v3dQVdU2YzcW1Vag1lBoRHg8wQHg0yQ3g0yAzh0SAzhEeDzBAeDTJDeDSjzCycCBFxF05kSVuIiLukLYuNQ0TcxcYlvAYCIvHmayAkvKAHoiCeHn1Bj0aGbqlFmBTClhAfxUtbWti4MhMSLyn9AfhdASktzEuxAAAAAElFTkSuQmCC" InformativeScreenshot="58fab70283014d5c1c79cb74c6177036.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IDP - Demo' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
-                      </uix:NClick.Target>
-                    </uix:NClick>
                   </Sequence>
                 </Sequence>
               </If.Else>
             </If>
-            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Move On ? " sap:VirtualizedContainerService.HintSize="737.6,497.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[MoveOn = False]" DisplayName="Move On ? " sap:VirtualizedContainerService.HintSize="641.6,227.2" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
               <ui:InterruptibleDoWhile.Body>
-                <uix:NCheckState DisplayName="Check Validation Message" sap:VirtualizedContainerService.HintSize="702.4,320.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="e721e321-6193-4ddf-bccc-ac1f7ee46586" Timeout="2" Version="V3">
+                <uix:NCheckState DisplayName="Check Validation Message" sap:VirtualizedContainerService.HintSize="252,52.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="e721e321-6193-4ddf-bccc-ac1f7ee46586" Timeout="2" Version="V3">
                   <uix:NCheckState.IfExists>
-                    <Sequence DisplayName="Change State &amp; go to maine page" sap:VirtualizedContainerService.HintSize="400,92.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <Sequence DisplayName="Change State &amp; go to maine page" sap:VirtualizedContainerService.HintSize="449.6,279.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NGoToUrl DisplayName="Go Home" sap:VirtualizedContainerService.HintSize="337.6,62.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://idpdemo.knack.com/idp-demo#home/" Version="V3">
+                      <uix:NGoToUrl DisplayName="Go Home" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://idpdemo.knack.com/idp-demo#home/" Version="V3">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -564,15 +520,12 @@
                   </uix:NCheckState.Target>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NCheckState>
               </ui:InterruptibleDoWhile.Body>
-              <ui:InterruptibleDoWhile.Condition>
-                <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="MoveOn = False" />
-              </ui:InterruptibleDoWhile.Condition>
             </ui:InterruptibleDoWhile>
           </Sequence>
         </ActivityAction>
